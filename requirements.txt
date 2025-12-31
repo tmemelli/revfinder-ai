@@ -1,17 +1,7 @@
-# =============================================================================
-# REVFINDER AI - Dependências para Streamlit Cloud
-# =============================================================================
-
-# Interface Web
 streamlit>=1.28.0
-
-# Manipulação de dados
 pandas>=2.0.0
 openpyxl>=3.1.0
-
-# Agente de IA
 crewai>=0.28.0
 langchain-openai>=0.0.5
-
-# Variáveis de ambiente
 python-dotenv>=1.0.0
+colorama>=0.4.6
