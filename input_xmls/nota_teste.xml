@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nfeProc xmlns="http://www.portalfiscal.inf.br/nfe" versao="4.00">
+  <NFe>
+    <infNFe Id="NFe32251228129260068256391020001192491613641729" versao="4.00">
+      
+      <!-- IDENTIFICAÇÃO DA NOTA -->
+      <ide>
+        <cUF>32</cUF>
+        <cNF>13641729</cNF>
+        <natOp>VENDA</natOp>
+        <mod>65</mod>
+        <serie>202</serie>
+        <nNF>119249</nNF>
+        <dhEmi>2025-12-29T18:03:19-03:00</dhEmi>
+        <tpNF>1</tpNF>
+        <idDest>1</idDest>
+        <cMunFG>3205309</cMunFG>
+        <tpImp>4</tpImp>
+        <tpEmis>1</tpEmis>
+        <tpAmb>1</tpAmb>
+        <finNFe>1</finNFe>
+        <indFinal>1</indFinal>
+        <indPres>1</indPres>
+      </ide>
+      
+      <!-- DADOS DO EMITENTE -->
+      <emit>
+        <CNPJ>28129260000423</CNPJ>
+        <xNome>DRIFT COM DE ALIMENTOS SA</xNome>
+        <xFant>DRIFT SUPERMERCADOS</xFant>
+        <enderEmit>
+          <xLgr>AVENIDA RIO BRANCO</xLgr>
+          <nro>77</nro>
+          <xBairro>SANTA LUCIA</xBairro>
+          <cMun>3205309</cMun>
+          <xMun>VITORIA</xMun>
+          <UF>ES</UF>
+          <CEP>29056295</CEP>
+        </enderEmit>
+        <IE>082456789</IE>
+        <CRT>3</CRT>
+      </emit>
+      
+      <!-- DADOS DO DESTINATÁRIO (CONSUMIDOR) -->
+      <dest>
+        <CPF>85128996700</CPF>
+        <xNome>CONSUMIDOR</xNome>
+        <indIEDest>9</indIEDest>
+      </dest>
+
+      <!-- ITEM 1: ÁGUA MINERAL - MONOFÁSICO! -->
+      <det nItem="1">
+        <prod>
+          <cProd>198743</cProd>
+          <cEAN>7896065876543</cEAN>
+          <xProd>AGUA MIN PEDRA AZUL 510ML C/6 C/GAS</xProd>
+          <NCM>22011000</NCM>
+          <CFOP>5405</CFOP>
+          <uCom>UN</uCom>
+          <qCom>1.0000</qCom>
+          <vUnCom>11.99</vUnCom>
+          <vProd>11.99</vProd>
+          <cEANTrib>7896065876543</cEANTrib>
+          <uTrib>UN</uTrib>
+          <qTrib>1.0000</qTrib>
+          <vUnTrib>11.99</vUnTrib>
+          <indTot>1</indTot>
+        </prod>
+        <imposto>
+          <PIS>
+            <PISAliq>
+              <CST>01</CST>
+              <vBC>11.99</vBC>
+              <pPIS>1.65</pPIS>
+              <vPIS>0.20</vPIS>
+            </PISAliq>
+          </PIS>
+          <COFINS>
+            <COFINSAliq>
+              <CST>01</CST>
+              <vBC>11.99</vBC>
+              <pCOFINS>7.60</pCOFINS>
+              <vCOFINS>0.91</vCOFINS>
+            </COFINSAliq>
+          </COFINS>
+        </imposto>
+      </det>
+
+      <!-- ITEM 2: CERVEJA HEINEKEN - MONOFÁSICO! NCM ERRADO de propósito -->
+      <det nItem="2">
+        <prod>
+          <cProd>45678</cProd>
+          <cEAN>7896012345678</cEAN>
+          <xProd>CERVEJA HEINEKEN 600ML</xProd>
+          <NCM>00000000</NCM>
+          <CFOP>5102</CFOP>
+          <uCom>UN</uCom>
+          <qCom>6.0000</qCom>
+          <vUnCom>8.99</vUnCom>
+          <vProd>53.94</vProd>
+          <cEANTrib>7896012345678</cEANTrib>
+          <uTrib>UN</uTrib>
+          <qTrib>6.0000</qTrib>
+          <vUnTrib>8.99</vUnTrib>
+          <indTot>1</indTot>
+        </prod>
+        <imposto>
+          <PIS>
+            <PISAliq>
+              <CST>01</CST>
+              <vBC>53.94</vBC>
+              <pPIS>1.65</pPIS>
+              <vPIS>0.89</vPIS>
+            </PISAliq>
+          </PIS>
+          <COFINS>
+            <COFINSAliq>
+              <CST>01</CST>
+              <vBC>53.94</vBC>
+              <pCOFINS>7.60</pCOFINS>
+              <vCOFINS>4.10</vCOFINS>
+            </COFINSAliq>
+          </COFINS>
+        </imposto>
+      </det>
+
+      <!-- ITEM 3: REFRIGERANTE COCA - MONOFÁSICO mas CST correto (04) -->
+      <det nItem="3">
+        <prod>
+          <cProd>12345</cProd>
+          <cEAN>7894900010015</cEAN>
+          <xProd>REFRIGERANTE COCA COLA 2L</xProd>
+          <NCM>22021000</NCM>
+          <CFOP>5405</CFOP>
+          <uCom>UN</uCom>
+          <qCom>2.0000</qCom>
+          <vUnCom>9.99</vUnCom>
+          <vProd>19.98</vProd>
+          <cEANTrib>7894900010015</cEANTrib>
+          <uTrib>UN</uTrib>
+          <qTrib>2.0000</qTrib>
+          <vUnTrib>9.99</vUnTrib>
+          <indTot>1</indTot>
+        </prod>
+        <imposto>
+          <PIS>
+            <PISNT>
+              <CST>04</CST>
+            </PISNT>
+          </PIS>
+          <COFINS>
+            <COFINSNT>
+              <CST>04</CST>
+            </COFINSNT>
+          </COFINS>
+        </imposto>
+      </det>
+
+      <!-- ITEM 4: VINHO - NÃO É MONOFÁSICO -->
+      <det nItem="4">
+        <prod>
+          <cProd>121892</cProd>
+          <cEAN>5601012345678</cEAN>
+          <xProd>VH BCO POR CASAL GARCIA SWEET 750ML</xProd>
+          <NCM>22042100</NCM>
+          <CFOP>5102</CFOP>
+          <uCom>UN</uCom>
+          <qCom>1.0000</qCom>
+          <vUnCom>69.90</vUnCom>
+          <vProd>69.90</vProd>
+          <cEANTrib>5601012345678</cEANTrib>
+          <uTrib>UN</uTrib>
+          <qTrib>1.0000</qTrib>
+          <vUnTrib>69.90</vUnTrib>
+          <indTot>1</indTot>
+        </prod>
+        <imposto>
+          <PIS>
+            <PISAliq>
+              <CST>01</CST>
+              <vBC>69.90</vBC>
+              <pPIS>1.65</pPIS>
+              <vPIS>1.15</vPIS>
+            </PISAliq>
+          </PIS>
+          <COFINS>
+            <COFINSAliq>
+              <CST>01</CST>
+              <vBC>69.90</vBC>
+              <pCOFINS>7.60</pCOFINS>
+              <vCOFINS>5.31</vCOFINS>
+            </COFINSAliq>
+          </COFINS>
+        </imposto>
+      </det>
+
+      <!-- ITEM 5: SUCO PRONTO - MONOFÁSICO! -->
+      <det nItem="5">
+        <prod>
+          <cProd>62944</cProd>
+          <cEAN>7891234567890</cEAN>
+          <xProd>SUCO LARANJA DEL VALLE 1L</xProd>
+          <NCM>22029900</NCM>
+          <CFOP>5102</CFOP>
+          <uCom>UN</uCom>
+          <qCom>2.0000</qCom>
+          <vUnCom>10.45</vUnCom>
+          <vProd>20.90</vProd>
+          <cEANTrib>7891234567890</cEANTrib>
+          <uTrib>UN</uTrib>
+          <qTrib>2.0000</qTrib>
+          <vUnTrib>10.45</vUnTrib>
+          <indTot>1</indTot>
+        </prod>
+        <imposto>
+          <PIS>
+            <PISAliq>
+              <CST>01</CST>
+              <vBC>20.90</vBC>
+              <pPIS>1.65</pPIS>
+              <vPIS>0.34</vPIS>
+            </PISAliq>
+          </PIS>
+          <COFINS>
+            <COFINSAliq>
+              <CST>01</CST>
+              <vBC>20.90</vBC>
+              <pCOFINS>7.60</pCOFINS>
+              <vCOFINS>1.59</vCOFINS>
+            </COFINSAliq>
+          </COFINS>
+        </imposto>
+      </det>
+
+      <!-- ITEM 6: COMIDA - NÃO É MONOFÁSICO -->
+      <det nItem="6">
+        <prod>
+          <cProd>1449</cProd>
+          <cEAN>0000000001449</cEAN>
+          <xProd>BATATA INGLESA KG</xProd>
+          <NCM>07019000</NCM>
+          <CFOP>5102</CFOP>
+          <uCom>KG</uCom>
+          <qCom>0.9640</qCom>
+          <vUnCom>6.99</vUnCom>
+          <vProd>6.74</vProd>
+          <cEANTrib>0000000001449</cEANTrib>
+          <uTrib>KG</uTrib>
+          <qTrib>0.9640</qTrib>
+          <vUnTrib>6.99</vUnTrib>
+          <indTot>1</indTot>
+        </prod>
+        <imposto>
+          <PIS>
+            <PISAliq>
+              <CST>01</CST>
+              <vBC>6.74</vBC>
+              <pPIS>1.65</pPIS>
+              <vPIS>0.11</vPIS>
+            </PISAliq>
+          </PIS>
+          <COFINS>
+            <COFINSAliq>
+              <CST>01</CST>
+              <vBC>6.74</vBC>
+              <pCOFINS>7.60</pCOFINS>
+              <vCOFINS>0.51</vCOFINS>
+            </COFINSAliq>
+          </COFINS>
+        </imposto>
+      </det>
+
+      <!-- TOTAIS DA NOTA -->
+      <total>
+        <ICMSTot>
+          <vBC>0.00</vBC>
+          <vICMS>0.00</vICMS>
+          <vProd>183.45</vProd>
+          <vNF>183.45</vNF>
+          <vTotTrib>15.11</vTotTrib>
+        </ICMSTot>
+      </total>
+
+      <!-- INFORMAÇÕES DE PAGAMENTO -->
+      <pag>
+        <detPag>
+          <tPag>01</tPag>
+          <vPag>183.45</vPag>
+        </detPag>
+      </pag>
+
+    </infNFe>
+  </NFe>
+  
+  <!-- PROTOCOLO DE AUTORIZAÇÃO -->
+  <protNFe versao="4.00">
+    <infProt>
+      <tpAmb>1</tpAmb>
+      <verAplic>ES_NFCe_1.0</verAplic>
+      <chNFe>32251228129260000423652020001192491613641729</chNFe>
+      <dhRecbto>2025-12-29T18:03:20-03:00</dhRecbto>
+      <nProt>232250731931894</nProt>
+      <digVal>abc123</digVal>
+      <cStat>100</cStat>
+      <xMotivo>Autorizado o uso da NF-e</xMotivo>
+    </infProt>
+  </protNFe>
+</nfeProc>

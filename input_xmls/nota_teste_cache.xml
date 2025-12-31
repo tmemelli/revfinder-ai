@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nfeProc xmlns="http://www.portalfiscal.inf.br/nfe" versao="4.00">
+  <NFe>
+    <infNFe Id="NFe32251230129260000423652020001199991613641729" versao="4.00">
+      
+      <!-- IDENTIFICAÇÃO DA NOTA -->
+      <ide>
+        <cUF>32</cUF>
+        <cNF>13641729</cNF>
+        <natOp>VENDA</natOp>
+        <mod>65</mod>
+        <serie>202</serie>
+        <nNF>999999</nNF>
+        <dhEmi>2025-12-30T10:00:00-03:00</dhEmi>
+        <tpNF>1</tpNF>
+        <idDest>1</idDest>
+        <cMunFG>3205309</cMunFG>
+        <tpImp>4</tpImp>
+        <tpEmis>1</tpEmis>
+        <tpAmb>1</tpAmb>
+        <finNFe>1</finNFe>
+        <indFinal>1</indFinal>
+        <indPres>1</indPres>
+      </ide>
+      
+      <!-- DADOS DO EMITENTE -->
+      <emit>
+        <CNPJ>28129260000423</CNPJ>
+        <xNome>RESTAURANTE TESTE CACHE IA</xNome>
+        <xFant>TESTE CACHE</xFant>
+        <enderEmit>
+          <xLgr>RUA TESTE</xLgr>
+          <nro>123</nro>
+          <xBairro>CENTRO</xBairro>
+          <cMun>3205309</cMun>
+          <xMun>VITORIA</xMun>
+          <UF>ES</UF>
+          <CEP>29010000</CEP>
+        </enderEmit>
+        <IE>082456789</IE>
+        <CRT>3</CRT>
+      </emit>
+      
+      <!-- DADOS DO DESTINATÁRIO -->
+      <dest>
+        <CPF>12345678900</CPF>
+        <xNome>CONSUMIDOR TESTE</xNome>
+        <indIEDest>9</indIEDest>
+      </dest>
+
+      <!-- ================================================================ -->
+      <!-- PRODUTOS QUE VÃO CHAMAR IA (primeira vez) E DEPOIS USAR CACHE    -->
+      <!-- ================================================================ -->
+
+      <!-- ITEM 1: VINHO (NÃO monofásico) - PRIMEIRA VEZ = CHAMA IA -->
+      <det nItem="1">
+        <prod>
+          <cProd>VIN001</cProd>
+          <cEAN>7891234567001</cEAN>
+          <xProd>VH BCO POR CASAL GARCIA SWEET 750ML</xProd>
+          <NCM>22042100</NCM>
+          <CFOP>5102</CFOP>
+          <uCom>UN</uCom>
+          <qCom>1.0000</qCom>
+          <vUnCom>69.90</vUnCom>
+          <vProd>69.90</vProd>
+          <cEANTrib>7891234567001</cEANTrib>
+          <uTrib>UN</uTrib>
+          <qTrib>1.0000</qTrib>
+          <vUnTrib>69.90</vUnTrib>
+          <indTot>1</indTot>
+        </prod>
+        <imposto>
+          <PIS>
+            <PISAliq>
+              <CST>01</CST>
+              <vBC>69.90</vBC>
+              <pPIS>1.65</pPIS>
+              <vPIS>1.15</vPIS>
+            </PISAliq>
+          </PIS>
+          <COFINS>
+            <COFINSAliq>
+              <CST>01</CST>
+              <vBC>69.90</vBC>
+              <pCOFINS>7.60</pCOFINS>
+              <vCOFINS>5.31</vCOFINS>
+            </COFINSAliq>
+          </COFINS>
+        </imposto>
+      </det>
+
+      <!-- ITEM 2: BATATA (NÃO monofásico) - PRIMEIRA VEZ = CHAMA IA -->
+      <det nItem="2">
+        <prod>
+          <cProd>BAT001</cProd>
+          <cEAN>7891234567002</cEAN>
+          <xProd>BATATA INGLESA KG</xProd>
+          <NCM>07019000</NCM>
+          <CFOP>5102</CFOP>
+          <uCom>KG</uCom>
+          <qCom>2.0000</qCom>
+          <vUnCom>6.99</vUnCom>
+          <vProd>13.98</vProd>
+          <cEANTrib>7891234567002</cEANTrib>
+          <uTrib>KG</uTrib>
+          <qTrib>2.0000</qTrib>
+          <vUnTrib>6.99</vUnTrib>
+          <indTot>1</indTot>
+        </prod>
+        <imposto>
+          <PIS>
+            <PISAliq>
+              <CST>01</CST>
+              <vBC>13.98</vBC>
+              <pPIS>1.65</pPIS>
+              <vPIS>0.23</vPIS>
+            </PISAliq>
+          </PIS>
+          <COFINS>
+            <COFINSAliq>
+              <CST>01</CST>
+              <vBC>13.98</vBC>
+              <pCOFINS>7.60</pCOFINS>
+              <vCOFINS>1.06</vCOFINS>
+            </COFINSAliq>
+          </COFINS>
+        </imposto>
+      </det>
+
+      <!-- ITEM 3: MESMO VINHO DE NOVO - SEGUNDA VEZ = DEVE USAR CACHE! -->
+      <det nItem="3">
+        <prod>
+          <cProd>VIN001</cProd>
+          <cEAN>7891234567001</cEAN>
+          <xProd>VH BCO POR CASAL GARCIA SWEET 750ML</xProd>
+          <NCM>22042100</NCM>
+          <CFOP>5102</CFOP>
+          <uCom>UN</uCom>
+          <qCom>2.0000</qCom>
+          <vUnCom>69.90</vUnCom>
+          <vProd>139.80</vProd>
+          <cEANTrib>7891234567001</cEANTrib>
+          <uTrib>UN</uTrib>
+          <qTrib>2.0000</qTrib>
+          <vUnTrib>69.90</vUnTrib>
+          <indTot>1</indTot>
+        </prod>
+        <imposto>
+          <PIS>
+            <PISAliq>
+              <CST>01</CST>
+              <vBC>139.80</vBC>
+              <pPIS>1.65</pPIS>
+              <vPIS>2.31</vPIS>
+            </PISAliq>
+          </PIS>
+          <COFINS>
+            <COFINSAliq>
+              <CST>01</CST>
+              <vBC>139.80</vBC>
+              <pCOFINS>7.60</pCOFINS>
+              <vCOFINS>10.62</vCOFINS>
+            </COFINSAliq>
+          </COFINS>
+        </imposto>
+      </det>
+
+      <!-- ITEM 4: MESMA BATATA DE NOVO - SEGUNDA VEZ = DEVE USAR CACHE! -->
+      <det nItem="4">
+        <prod>
+          <cProd>BAT001</cProd>
+          <cEAN>7891234567002</cEAN>
+          <xProd>BATATA INGLESA KG</xProd>
+          <NCM>07019000</NCM>
+          <CFOP>5102</CFOP>
+          <uCom>KG</uCom>
+          <qCom>3.0000</qCom>
+          <vUnCom>6.99</vUnCom>
+          <vProd>20.97</vProd>
+          <cEANTrib>7891234567002</cEANTrib>
+          <uTrib>KG</uTrib>
+          <qTrib>3.0000</qTrib>
+          <vUnTrib>6.99</vUnTrib>
+          <indTot>1</indTot>
+        </prod>
+        <imposto>
+          <PIS>
+            <PISAliq>
+              <CST>01</CST>
+              <vBC>20.97</vBC>
+              <pPIS>1.65</pPIS>
+              <vPIS>0.35</vPIS>
+            </PISAliq>
+          </PIS>
+          <COFINS>
+            <COFINSAliq>
+              <CST>01</CST>
+              <vBC>20.97</vBC>
+              <pCOFINS>7.60</pCOFINS>
+              <vCOFINS>1.59</vCOFINS>
+            </COFINSAliq>
+          </COFINS>
+        </imposto>
+      </det>
+
+      <!-- ITEM 5: OUTRO VINHO DIFERENTE - PRIMEIRA VEZ = CHAMA IA -->
+      <det nItem="5">
+        <prod>
+          <cProd>VIN002</cProd>
+          <cEAN>7891234567003</cEAN>
+          <xProd>ESPUMANTE CHANDON BRUT 750ML</xProd>
+          <NCM>22041010</NCM>
+          <CFOP>5102</CFOP>
+          <uCom>UN</uCom>
+          <qCom>1.0000</qCom>
+          <vUnCom>89.90</vUnCom>
+          <vProd>89.90</vProd>
+          <cEANTrib>7891234567003</cEANTrib>
+          <uTrib>UN</uTrib>
+          <qTrib>1.0000</qTrib>
+          <vUnTrib>89.90</vUnTrib>
+          <indTot>1</indTot>
+        </prod>
+        <imposto>
+          <PIS>
+            <PISAliq>
+              <CST>01</CST>
+              <vBC>89.90</vBC>
+              <pPIS>1.65</pPIS>
+              <vPIS>1.48</vPIS>
+            </PISAliq>
+          </PIS>
+          <COFINS>
+            <COFINSAliq>
+              <CST>01</CST>
+              <vBC>89.90</vBC>
+              <pCOFINS>7.60</pCOFINS>
+              <vCOFINS>6.83</vCOFINS>
+            </COFINSAliq>
+          </COFINS>
+        </imposto>
+      </det>
+
+      <!-- ITEM 6: MESMO ESPUMANTE DE NOVO - SEGUNDA VEZ = DEVE USAR CACHE! -->
+      <det nItem="6">
+        <prod>
+          <cProd>VIN002</cProd>
+          <cEAN>7891234567003</cEAN>
+          <xProd>ESPUMANTE CHANDON BRUT 750ML</xProd>
+          <NCM>22041010</NCM>
+          <CFOP>5102</CFOP>
+          <uCom>UN</uCom>
+          <qCom>1.0000</qCom>
+          <vUnCom>89.90</vUnCom>
+          <vProd>89.90</vProd>
+          <cEANTrib>7891234567003</cEANTrib>
+          <uTrib>UN</uTrib>
+          <qTrib>1.0000</qTrib>
+          <vUnTrib>89.90</vUnTrib>
+          <indTot>1</indTot>
+        </prod>
+        <imposto>
+          <PIS>
+            <PISAliq>
+              <CST>01</CST>
+              <vBC>89.90</vBC>
+              <pPIS>1.65</pPIS>
+              <vPIS>1.48</vPIS>
+            </PISAliq>
+          </PIS>
+          <COFINS>
+            <COFINSAliq>
+              <CST>01</CST>
+              <vBC>89.90</vBC>
+              <pCOFINS>7.60</pCOFINS>
+              <vCOFINS>6.83</vCOFINS>
+            </COFINSAliq>
+          </COFINS>
+        </imposto>
+      </det>
+
+      <!-- ================================================================ -->
+      <!-- PRODUTOS MONOFÁSICOS (para ter algo recuperável no relatório)    -->
+      <!-- ================================================================ -->
+
+      <!-- ITEM 7: CERVEJA - Identificada por KEYWORD, não chama IA -->
+      <det nItem="7">
+        <prod>
+          <cProd>CERV001</cProd>
+          <cEAN>7891234567007</cEAN>
+          <xProd>CERVEJA HEINEKEN 600ML</xProd>
+          <NCM>00000000</NCM>
+          <CFOP>5102</CFOP>
+          <uCom>UN</uCom>
+          <qCom>6.0000</qCom>
+          <vUnCom>9.99</vUnCom>
+          <vProd>59.94</vProd>
+          <cEANTrib>7891234567007</cEANTrib>
+          <uTrib>UN</uTrib>
+          <qTrib>6.0000</qTrib>
+          <vUnTrib>9.99</vUnTrib>
+          <indTot>1</indTot>
+        </prod>
+        <imposto>
+          <PIS>
+            <PISAliq>
+              <CST>01</CST>
+              <vBC>59.94</vBC>
+              <pPIS>1.65</pPIS>
+              <vPIS>0.99</vPIS>
+            </PISAliq>
+          </PIS>
+          <COFINS>
+            <COFINSAliq>
+              <CST>01</CST>
+              <vBC>59.94</vBC>
+              <pCOFINS>7.60</pCOFINS>
+              <vCOFINS>4.56</vCOFINS>
+            </COFINSAliq>
+          </COFINS>
+        </imposto>
+      </det>
+
+      <!-- ITEM 8: ÁGUA MINERAL - NCM correto (monofásico) -->
+      <det nItem="8">
+        <prod>
+          <cProd>AGUA001</cProd>
+          <cEAN>7891234567008</cEAN>
+          <xProd>AGUA MINERAL CRYSTAL 500ML</xProd>
+          <NCM>22011000</NCM>
+          <CFOP>5405</CFOP>
+          <uCom>UN</uCom>
+          <qCom>10.0000</qCom>
+          <vUnCom>2.50</vUnCom>
+          <vProd>25.00</vProd>
+          <cEANTrib>7891234567008</cEANTrib>
+          <uTrib>UN</uTrib>
+          <qTrib>10.0000</qTrib>
+          <vUnTrib>2.50</vUnTrib>
+          <indTot>1</indTot>
+        </prod>
+        <imposto>
+          <PIS>
+            <PISAliq>
+              <CST>01</CST>
+              <vBC>25.00</vBC>
+              <pPIS>1.65</pPIS>
+              <vPIS>0.41</vPIS>
+            </PISAliq>
+          </PIS>
+          <COFINS>
+            <COFINSAliq>
+              <CST>01</CST>
+              <vBC>25.00</vBC>
+              <pCOFINS>7.60</pCOFINS>
+              <vCOFINS>1.90</vCOFINS>
+            </COFINSAliq>
+          </COFINS>
+        </imposto>
+      </det>
+
+      <!-- TOTAIS DA NOTA -->
+      <total>
+        <ICMSTot>
+          <vBC>0.00</vBC>
+          <vICMS>0.00</vICMS>
+          <vProd>509.39</vProd>
+          <vNF>509.39</vNF>
+          <vTotTrib>40.37</vTotTrib>
+        </ICMSTot>
+      </total>
+
+      <!-- INFORMAÇÕES DE PAGAMENTO -->
+      <pag>
+        <detPag>
+          <tPag>01</tPag>
+          <vPag>509.39</vPag>
+        </detPag>
+      </pag>
+
+    </infNFe>
+  </NFe>
+  
+  <!-- PROTOCOLO DE AUTORIZAÇÃO -->
+  <protNFe versao="4.00">
+    <infProt>
+      <tpAmb>1</tpAmb>
+      <verAplic>ES_NFCe_1.0</verAplic>
+      <chNFe>32251230129260000423652020001199991613641729</chNFe>
+      <dhRecbto>2025-12-30T10:00:01-03:00</dhRecbto>
+      <nProt>232250731999999</nProt>
+      <digVal>xyz789</digVal>
+      <cStat>100</cStat>
+      <xMotivo>Autorizado o uso da NF-e</xMotivo>
+    </infProt>
+  </protNFe>
+</nfeProc>

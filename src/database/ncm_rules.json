@@ -1,0 +1,426 @@
+{
+    "_metadata": {
+        "versao": "2.3",
+        "descricao": "Base de dados de NCMs monofasicos para PIS/COFINS - El Libertador",
+        "base_legal": "Lei 13.097/2015, arts. 14 a 36 - Decreto 8.442/2015",
+        "ultima_atualizacao": "2025-12-31",
+        "fonte": "Receita Federal do Brasil - Tabela TIPI + Cardapio El Libertador"
+    },
+    "2201": {
+        "descricao_grupo": "Aguas minerais e gaseificadas",
+        "ncms": {
+            "22011000": {
+                "descricao": "Aguas minerais e aguas gaseificadas",
+                "exemplos": [
+                    "Agua mineral com gas",
+                    "Agua mineral sem gas",
+                    "Agua Crystal",
+                    "Agua Bonafont",
+                    "Agua Minalba"
+                ],
+                "monofasico": true
+            },
+            "22019000": {
+                "descricao": "Outras aguas (gelo, neve)",
+                "exemplos": [
+                    "Gelo em cubo",
+                    "Gelo moido"
+                ],
+                "monofasico": true
+            }
+        }
+    },
+    "2202": {
+        "descricao_grupo": "Bebidas nao alcoolicas",
+        "ncms": {
+            "22021000": {
+                "descricao": "Refrigerantes e outras bebidas com adicao de acucar",
+                "exemplos": [
+                    "Coca-Cola",
+                    "Pepsi",
+                    "Fanta",
+                    "Guarana",
+                    "Sprite",
+                    "H2OH",
+                    "Schweppes",
+                    "Soda limonada"
+                ],
+                "monofasico": true
+            },
+            "22029100": {
+                "descricao": "Cervejas sem alcool",
+                "exemplos": [
+                    "Heineken 0.0",
+                    "Budweiser Zero",
+                    "Amstel 0.0",
+                    "Brahma Zero",
+                    "Bavaria 0.0"
+                ],
+                "monofasico": true
+            },
+            "22029900": {
+                "descricao": "Outras bebidas nao alcoolicas (energeticos, isotonicos, sucos prontos, chas)",
+                "exemplos": [
+                    "Red Bull",
+                    "Monster",
+                    "Gatorade",
+                    "Del Valle",
+                    "Suco Natural",
+                    "Cha Matte Leao"
+                ],
+                "monofasico": true,
+                "excecoes": [
+                    "Ex 01 - Bebidas a base de soja (NAO e monofasico)",
+                    "Ex 02 - Nectares de frutas (NAO e monofasico)"
+                ]
+            }
+        }
+    },
+    "2202_energeticos_isotonicos": {
+        "descricao_grupo": "Energeticos e Isotonicos (subclassificacoes do 2202.90.00)",
+        "ncms": {
+            "22029900_EX03": {
+                "descricao": "Repositores hidroeletroliticos (Isotonicos)",
+                "exemplos": [
+                    "Gatorade",
+                    "Powerade",
+                    "Marathon",
+                    "Energil Sport"
+                ],
+                "monofasico": true
+            },
+            "22029900_EX04": {
+                "descricao": "Compostos liquidos prontos para consumo (Energeticos)",
+                "exemplos": [
+                    "Red Bull",
+                    "Monster",
+                    "Burn",
+                    "TNT Energy",
+                    "Fusion"
+                ],
+                "monofasico": true,
+                "observacao": "Contem inositol, glucoronolactona, taurina ou cafeina"
+            }
+        }
+    },
+    "2203": {
+        "descricao_grupo": "Cervejas de malte",
+        "ncms": {
+            "22030000": {
+                "descricao": "Cervejas de malte (com alcool)",
+                "exemplos": [
+                    "Heineken",
+                    "Brahma",
+                    "Skol",
+                    "Amstel",
+                    "Corona",
+                    "Stella Artois",
+                    "Estrella Galicia",
+                    "Baden Baden",
+                    "Therezopolis",
+                    "Lagunitas",
+                    "Bohemia",
+                    "Original",
+                    "Spaten",
+                    "Budweiser",
+                    "Antarctica"
+                ],
+                "monofasico": true
+            },
+            "22030000_EX01": {
+                "descricao": "Chope",
+                "exemplos": [
+                    "Chope claro",
+                    "Chope escuro",
+                    "Chope artesanal",
+                    "Pilsen",
+                    "Chopp da Semana"
+                ],
+                "monofasico": true
+            }
+        }
+    },
+    "2106": {
+        "descricao_grupo": "Preparacoes alimenticias",
+        "ncms": {
+            "21069010_EX02": {
+                "descricao": "Preparacoes compostas para elaboracao de bebida refrigerante (Post-mix/Pre-mix)",
+                "exemplos": [
+                    "Xarope Coca-Cola Post-mix",
+                    "Concentrado para maquinas de refrigerante"
+                ],
+                "monofasico": true,
+                "observacao": "Usado em maquinas de refrigerante de restaurantes"
+            }
+        }
+    },
+    "_ncms_monofasicos_lista": {
+        "_comentario": "Lista rapida para verificacao - todos NCMs que sao monofasicos",
+        "lista": [
+            "22011000",
+            "22019000",
+            "22021000",
+            "22029100",
+            "22029900",
+            "22030000",
+            "21069010"
+        ]
+    },
+    "_keywords_produtos": {
+        "_comentario": "Palavras-chave para identificacao de produtos quando NCM esta incorreto",
+        "cerveja": [
+            "CERVEJA",
+            "CERV",
+            "HEINEKEN",
+            "BRAHMA",
+            "SKOL",
+            "ANTARCTICA",
+            "BUDWEISER",
+            "STELLA",
+            "CORONA",
+            "AMSTEL",
+            "BOHEMIA",
+            "ORIGINAL",
+            "SPATEN",
+            "PILSEN",
+            "LAGER",
+            "IPA",
+            "PALE ALE",
+            "WEISS",
+            "ESTRELLA GALICIA",
+            "LAGUNITAS",
+            "THEREZOPOLIS",
+            "BADEN BADEN",
+            "MICHELADA",
+            "EISENBAHN",
+            "COLORADO",
+            "DEVASSA"
+        ],
+        "chopp": [
+            "CHOPP",
+            "CHOPE",
+            "CHOPP ARTESANAL",
+            "CHOPP DA SEMANA"
+        ],
+        "refrigerante": [
+            "REFRIGERANTE",
+            "REFRI",
+            "COCA",
+            "COCA-COLA",
+            "PEPSI",
+            "FANTA",
+            "SPRITE",
+            "GUARANA",
+            "KUAT",
+            "SODA",
+            "SCHWEPPES",
+            "TONICA",
+            "GINGER",
+            "H2OH",
+            "H2O"
+        ],
+        "agua": [
+            "AGUA MINERAL",
+            "AGUA SEM GAS",
+            "AGUA COM GAS",
+            "CRYSTAL",
+            "BONAFONT",
+            "MINALBA",
+            "INDAIA",
+            "OURO FINO",
+            "SAO LOURENCO",
+            "PETROPOLIS"
+        ],
+        "energetico": [
+            "ENERGETICO",
+            "RED BULL",
+            "REDBULL",
+            "MONSTER",
+            "BURN",
+            "TNT",
+            "FUSION",
+            "ENERGY"
+        ],
+        "isotonico": [
+            "ISOTONICO",
+            "GATORADE",
+            "POWERADE",
+            "MARATHON"
+        ],
+        "suco_pronto": [
+            "SUCO NATURAL",
+            "SUCO MISTO",
+            "SUCO DE UVA",
+            "SUCO INTEGRAL",
+            "SUCO",
+            "DEL VALLE",
+            "DELL VALLE",
+            "MAGUARY",
+            "TANG",
+            "KAPO"
+        ],
+        "cha_pronto": [
+            "MATTE",
+            "LEAO",
+            "ICE TEA",
+            "LIPTON"
+        ],
+        "cerveja_sem_alcool": [
+            "SEM ALCOOL",
+            "ZERO ALCOOL",
+            "0.0",
+            "0,0"
+        ]
+    },
+    "_produtos_nao_monofasicos": {
+        "_comentario": "Produtos que NAO sao monofasicos - para evitar falsos positivos",
+        "vinho": {
+            "keywords": [
+                "VINHO",
+                "VH",
+                "TINTO",
+                "BRANCO",
+                "ROSE",
+                "MERLOT",
+                "CABERNET",
+                "MALBEC",
+                "CARMENERE",
+                "CHARDONNAY",
+                "SAUVIGNON",
+                "PINOT",
+                "SYRAH",
+                "TORRONTES",
+                "RESERVA"
+            ],
+            "marcas": [
+                "LAGUNA ANDINA",
+                "SALTO GRANDE",
+                "PUENTE AUSTRAL",
+                "THERA",
+                "AGOSTINO",
+                "ANBORDU",
+                "MATURANA",
+                "PATEL",
+                "PAIGAR",
+                "NEGRA",
+                "LUCAS",
+                "VIBRANTE",
+                "PARELLON",
+                "VOX",
+                "ASCENCION",
+                "NARANJO",
+                "UMA COLECCION",
+                "CASAL GARCIA"
+            ],
+            "ncm": "22042100",
+            "monofasico": false,
+            "motivo": "Vinhos nao estao na lista de produtos monofasicos"
+        },
+        "espumante": {
+            "keywords": [
+                "ESPUMANTE",
+                "BRUT",
+                "PROSECCO",
+                "CHAMPAGNE",
+                "CHANDON"
+            ],
+            "marcas": [
+                "THERA ANIMA BRUT"
+            ],
+            "ncm": "22041000",
+            "monofasico": false,
+            "motivo": "Espumantes nao sao monofasicos"
+        },
+        "destilados": {
+            "keywords": [
+                "WHISKY",
+                "WHISKEY",
+                "VODKA",
+                "GIN",
+                "RUM",
+                "TEQUILA",
+                "PISCO",
+                "CACHACA",
+                "LICOR",
+                "COINTREAU",
+                "CAMPARI",
+                "APEROL",
+                "BOURBON",
+                "ANGOSTURA"
+            ],
+            "marcas": [
+                "JACK DANIELS",
+                "JIM BEAM",
+                "JAMESON",
+                "CHIVAS",
+                "RED LABEL",
+                "SMIRNOFF",
+                "ABSOLUT",
+                "TANQUERAY",
+                "BACCARDI",
+                "HAVANA",
+                "LICOR 43"
+            ],
+            "ncm": "22089000",
+            "monofasico": false,
+            "motivo": "Destilados nao sao monofasicos"
+        },
+        "drinks": {
+            "keywords": [
+                "CAIPIRINHA",
+                "MOJITO",
+                "MARGARITA",
+                "COSMOPOLITAN",
+                "MOSCOW MULE",
+                "NEGRONI",
+                "SPRITZ",
+                "SOUR",
+                "SANGRIA",
+                "CLERICOT"
+            ],
+            "monofasico": false,
+            "motivo": "Drinks sao preparacoes, nao bebidas prontas industrializadas"
+        },
+        "cafe": {
+            "keywords": [
+                "CAFE",
+                "EXPRESSO",
+                "ESPRESSO",
+                "CAPPUCCINO"
+            ],
+            "ncm": "09012100",
+            "monofasico": false,
+            "motivo": "Cafe nao e monofasico"
+        }
+    },
+    "_aprendizado_ia": {
+        "_comentario": "Cache de respostas da IA - Gerado automaticamente pelo sistema",
+        "_total_economizado": 35,
+        "produtos": {
+            "VH BCO POR CASAL GARCIA SWEET 750ML": {
+                "is_monofasico": false,
+                "ncm_sugerido": "22042100",
+                "motivo": "Not a monophasic product",
+                "data_aprendizado": "2025-12-30T09:47:01.005724"
+            },
+            "BATATA INGLESA KG": {
+                "is_monofasico": false,
+                "ncm_sugerido": "07019000",
+                "motivo": "Not a monophasic product - Potato is not a beverage",
+                "data_aprendizado": "2025-12-30T09:47:04.794717"
+            },
+            "ESPUMANTE CHANDON BRUT 750ML": {
+                "is_monofasico": false,
+                "ncm_sugerido": "22041010",
+                "motivo": "Not a monophasic product - Sparkling wine identified",
+                "data_aprendizado": "2025-12-30T09:47:09.326864"
+            },
+            "AGUA MIN PEDRA AZUL 510ML C/6 C/GAS": {
+                "is_monofasico": true,
+                "ncm_sugerido": "22011000",
+                "motivo": "Water identified",
+                "data_aprendizado": "2025-12-31T17:55:47.558402"
+            }
+        }
+    }
+}
