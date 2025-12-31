@@ -18,7 +18,7 @@ COMO EXECUTAR:
 --------------
     streamlit run app.py
 
-Autor: Thiago Memelli
+Autor: Grande Mestre
 Versão: 1.0
 Data: Dezembro/2025
 ================================================================================
@@ -51,6 +51,74 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded"
 )
+
+# =============================================================================
+# AUTENTICAÇÃO
+# =============================================================================
+
+def check_password():
+    """Verifica se a senha está correta."""
+    
+    def password_entered():
+        """Checa a senha quando o usuário submete."""
+        # Pega a senha dos secrets (Streamlit Cloud) ou .env local
+        correct_password = st.secrets.get("APP_PASSWORD", os.environ.get("APP_PASSWORD", "admin123"))
+        
+        if st.session_state["password"] == correct_password:
+            st.session_state["password_correct"] = True
+            del st.session_state["password"]  # Remove a senha da memória
+        else:
+            st.session_state["password_correct"] = False
+
+    # Primeira execução ou não logado
+    if "password_correct" not in st.session_state:
+        st.markdown("""
+        <div style="display: flex; justify-content: center; align-items: center; height: 60vh;">
+            <div style="text-align: center; padding: 40px; background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 100%); 
+                        border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.3);">
+                <h1 style="color: white; margin-bottom: 10px;">🚀 RevFinder AI</h1>
+                <p style="color: #a0c4e8; margin-bottom: 30px;">Sistema de Recuperação Tributária</p>
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        col1, col2, col3 = st.columns([1, 1, 1])
+        with col2:
+            st.text_input(
+                "🔐 Digite a senha de acesso:",
+                type="password",
+                on_change=password_entered,
+                key="password"
+            )
+            st.caption("Entre em contato para obter acesso.")
+        return False
+    
+    # Senha errada
+    elif not st.session_state["password_correct"]:
+        st.markdown("""
+        <div style="display: flex; justify-content: center; align-items: center; height: 60vh;">
+            <div style="text-align: center; padding: 40px; background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 100%); 
+                        border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.3);">
+                <h1 style="color: white; margin-bottom: 10px;">🚀 RevFinder AI</h1>
+                <p style="color: #a0c4e8; margin-bottom: 30px;">Sistema de Recuperação Tributária</p>
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        col1, col2, col3 = st.columns([1, 1, 1])
+        with col2:
+            st.text_input(
+                "🔐 Digite a senha de acesso:",
+                type="password",
+                on_change=password_entered,
+                key="password"
+            )
+            st.error("❌ Senha incorreta. Tente novamente.")
+        return False
+    
+    # Senha correta
+    else:
+        return True
 
 # =============================================================================
 # CSS CUSTOMIZADO
@@ -485,7 +553,7 @@ def create_excel_download(erros: list, total_recuperavel: float) -> bytes:
             ('', False, 10),
             ('---', False, 10),
             ('Relatório gerado por RevFinder AI v2.3', False, 9),
-            ('Desenvolvido por Thiago Memelli - 2025', False, 9),
+            ('Desenvolvido por Grande Mestre - 2025', False, 9),
         ]
         
         for idx, (text, is_bold, size) in enumerate(disclaimer_texts, start=1):
@@ -532,6 +600,12 @@ def create_excel_download(erros: list, total_recuperavel: float) -> bytes:
 
 def main():
     """Função principal da aplicação."""
+    
+    # -----------------------------------------------------------------
+    # VERIFICAÇÃO DE SENHA
+    # -----------------------------------------------------------------
+    if not check_password():
+        return  # Para aqui se não estiver autenticado
     
     # -----------------------------------------------------------------
     # HEADER
@@ -581,8 +655,15 @@ def main():
         PIS/COFINS pagos indevidamente em
         produtos com tributação monofásica.
         
-        Desenvolvido por **Thiago Memelli**
+        Desenvolvido por **Grande Mestre**
         """)
+        
+        st.divider()
+        
+        # Botão de Logout
+        if st.button("🚪 Sair", type="secondary"):
+            st.session_state["password_correct"] = False
+            st.rerun()
     
     # -----------------------------------------------------------------
     # ÁREA PRINCIPAL
@@ -783,7 +864,7 @@ def main():
     # FOOTER
     # -----------------------------------------------------------------
     st.divider()
-    st.caption("🚀 RevFinder AI v2.1 | Desenvolvido por Thiago Memelli | 2025")
+    st.caption("🚀 RevFinder AI v2.1 | Desenvolvido por Grande Mestre | 2025")
 
 
 # =============================================================================
